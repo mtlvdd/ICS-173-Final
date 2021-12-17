@@ -2,17 +2,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # loads the dataset
-unemployment = pd.read_csv('Hawaii')
+unemployment = pd.read_csv('Hawaii_Food_Insecurity.csv')
 
 # title
 plt.title('Hawaii Islands Chart of Food Disparity', fontsize = 20)
 
 # x and y axis labels
-plt.xlabel('Island')
-plt.ylabel('Level of Food Insecurity')
+plt.xlabel('Rank of Food Insecurity')
+plt.ylabel('Level of Food Insecurity and Island')
 
 # plot
-plt.plot(unemployment["Island"], unemployment["Level"])
+plt.plot(hawaii_food_insecurity["Island"], hawaii_food_insecurity["Level"])
 
 # saves the image
 plt.savefig("hawaiifoodinsecurity.png")
